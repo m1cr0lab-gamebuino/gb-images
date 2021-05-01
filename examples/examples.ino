@@ -1,0 +1,1 @@
+// This empty sketch file is only used to open the `examples` folder with the Arduino IDE

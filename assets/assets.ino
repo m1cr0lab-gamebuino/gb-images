@@ -1,0 +1,1 @@
+// This empty sketch file is only used to open the `assets` folder with the Arduino IDE
