@@ -1,0 +1,221 @@
+// -----------------------------------------------------------------------------
+// Colors
+// https://coolors.co/7253ed-11b584-196360-1a8087-49cc6e
+// -----------------------------------------------------------------------------
+
+@import 'variables';
+@import 'code';
+
+.lang-selector .flag {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    transform: scale(.5);
+    background-image: url('../flags/flags-shiny-super-large-64x64.png');
+    background-repeat: no-repeat;
+    &.flag-fr { background-position: -64px 0; }
+    &.flag-en { background-position: 0 -64px; }
+}
+
+.aux-nav-list li a.site-button {
+    padding: 0 1rem;
+    &:hover {
+        background-image: none;
+        background-color: rgba($purple-000, .05);
+    }
+}
+
+.main-content {
+
+    line-height: 1.65rem;
+    text-align: justify;
+
+    h2,h3,h4,h5,h6 { margin-bottom: .75em; }
+
+    .table-wrapper {
+        margin: $media_vertical_margin 0;
+    }
+}
+
+.label {
+    border-radius: 4px;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-date {
+    color: rgba($date_color, .75);
+}
+
+::placeholder {
+    color: lighten($body-text-color, 30%);
+}
+
+blockquote {
+    margin: $media_vertical_margin 0;
+    padding: .5em 2em;
+    font-style: italic;
+    border-radius: 8px;
+    border: $note_color;
+    color: rgba(darken($note_color, 20%), .75);
+    background-color: rgba($note_color, .1);
+    box-shadow: inset 0 2px 4px rgba($note_color, .2);
+}
+
+.page-header {
+
+    .title {
+        font-weight: 300;
+        line-height: 1.15em;
+        color: $green-100;
+        text-shadow: 0 2px 4px rgba($green-100, .25);
+    }
+
+    .date {
+        font-style: italic;
+        color: rgba($date_color, .75);
+        
+        &::first-letter { text-transform: capitalize; }
+
+        .last_update {
+            font-size: .8em;
+            color: rgba($date_color, .5);
+        }
+    }
+
+    ul.tags {
+        list-style: none;
+        padding: 0;
+        line-height: 1.1em;
+        & li::before {
+            content: '';
+            margin: 0;
+        }
+    
+        & li.label {
+            margin: 0 .25em;
+            padding-left: .5rem;
+            padding-right: .5rem;
+            // &.label-green { background-color: $green-200; }
+        }
+    }
+}
+
+.formula {
+    $tint: 210;
+    padding: .25em 0;
+    border-radius: 4px;
+    font-size: .9em;
+    text-align: center;
+    color: darken($body-text-color, 10%);
+    background-color: hsl($tint, 50, 96);
+    box-shadow: inset 0 1px 2px rgba(#000, .2);
+}
+
+.figure {
+    // margin: $media_vertical_margin 0;
+    margin: $media_vertical_margin 0 1.25*$media_vertical_margin 0;
+    text-align: center;
+}
+
+.figure-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: $media_vertical_margin 0 1.25*$media_vertical_margin 0;
+}
+
+.shadow {
+    box-shadow: 0 4px 8px rgba(#000, .25);
+
+    &.rounded { border-radius: 4px; }
+}
+
+.caption {
+    color: darken($body-text-color, 30%);
+    font-weight: 500;
+    font-size: .8em;
+    margin: -$media_vertical_margin 0 $media_vertical_margin 0;
+    text-align: center;
+}
+
+// .meta-demo {
+//     position: relative;
+//     margin: $media_vertical_margin auto;
+//     width: 407px;
+//     height: 219px;
+//     background-image: url('../m1cr0lab/meta-814x438.png');
+//     background-size: cover;
+//     background-repeat: no-repeat;
+
+//     img {
+//         position: absolute;
+//         left: 123px;
+//         top: 43px;
+//         width: 160px;
+//         height: 128px;
+//     }
+// }
+
+.meta-demo {
+
+    $w: 792;
+    $h: 416;
+    $sx: 235;
+    $sy: 80;
+    $sw: 320;
+    $sh: 256;
+
+    margin: $media_vertical_margin auto 1.25*$media_vertical_margin auto;
+    width: 100%;
+    max-width: 0px + $w/2;
+
+    .console {
+        position: relative;
+        margin: 0 auto;
+        padding-top: percentage($h/$w);
+
+        background-image: url('../m1cr0lab/meta-792x416.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        filter: drop-shadow(0 4px 8px rgba(#000, .25));
+
+        .screen {
+            position: absolute;
+            left: percentage($sx/$w);
+            top: percentage($sy/$h);
+            width: percentage($sw/$w);
+            height: percentage($sh/$h);
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 1px solid #000;
+        }
+    }
+
+    &.meta-150 {
+        max-width: 0px + $w*3/4; /*  $w * 1.5 / 2  */
+        .console {
+            background-image: url('../m1cr0lab/meta-1188x624.png');
+        }
+    }
+}
+
+.form input {
+    margin: 1em;
+    padding: .5em 1em;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    font-size: .9em;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: inset 0 2px 4px rgba(#000, .15);
+    outline: none;
+}
+
+iframe {
+    margin: $media_vertical_margin 0;
+    width: 100%;
+    border:1px solid #ccc;
+}

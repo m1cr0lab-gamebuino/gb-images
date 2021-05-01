@@ -1,0 +1,9 @@
+{%- if tuto_lang == "fr" -%}
+    {%- assign other_lang = "en" -%}
+{%- else -%}
+    {%- assign other_lang = "fr" -%}
+{%- endif -%}
+{%- assign lang_ref_page = site.pages | where: "lang", other_lang | where: "lang_ref", page.lang_ref | first -%}
+<div class="lang-selector lang-{{ tuto_lang }}">
+    <a class="flag flag-{{ other_lang }}" href="{{ lang_ref_page.url | relative_url }}"></a>
+</div>

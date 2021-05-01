@@ -1,0 +1,29 @@
+{% if include.src contains "://" %}
+    {% assign src = include.src %}
+{% else %}
+    {% assign src = include.src | relative_url %}
+{% endif %}
+{% if include.alt %}
+    {% assign alt = include.alt %}
+{% else %}
+    {% assign alt = "Demo" %}
+{% endif %}
+
+{% comment %}
+<!-- old method -->
+<div class="meta-demo">
+    <img src="{{ src }}" alt="{{ alt }}" />
+</div>
+{% endcomment %}
+
+{% if include.scale %}
+<div class="meta-demo meta-{{ include.scale }}">
+{% else %}
+<div class="meta-demo">
+{% endif %}
+    <div class="console">
+        {% if src %}
+        <div class="screen" style="background-image:url('{{ src }}')"></div>
+        {% endif %}
+    </div>
+</div>

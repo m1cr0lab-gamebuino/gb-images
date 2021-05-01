@@ -1,0 +1,72 @@
+remote_theme: pmarsceill/just-the-docs
+# theme: "just-the-docs"
+
+color_scheme: m1cr0lab
+
+home: "m1cr0lab Tutorials"
+logo: "assets/m1cr0lab/site-title-400x86.png"
+home_url: "https://gamebuino.m1cr0lab.com/"
+
+# baseurl: "/gb-images"
+permalink: pretty
+timezone: Indian/Reunion
+
+search_enabled: false
+search_text:
+  fr: "Rechercher"
+  en: "Search"
+
+title:
+  fr: "Manipuler des images sur la Gamebuino META"
+  en: "Handling images on the Gamebuino META"
+
+description:
+  fr: "Ce tutoriel présente les différentes façons de gérer l'affichage des images sur la Gamebuino META."
+  en: "This tutorial presents the different ways to handle the display of images on the Gamebuino META."
+
+keywords:
+  fr: [gamebuino-meta, images, animation, gb.display]
+  en: [gamebuino-meta, images, animation, gb.display]
+
+lab_tags: [gamebuino-meta, images, animation, gb.display]
+
+image: "assets/m1cr0lab/site-title-400x86.png"
+author: "Stéphane Calderoni"
+social:
+  name: Stéphane Calderoni
+  links:
+    - https://github.com/m1cr0lab
+
+published_date: 2021-05-01 16:45 +0400
+
+heading_anchors: true
+
+back_to_top: true
+back_to_top_text:
+  fr: "Revenir en début de page"
+  en: "Back to top"
+
+last_edit_timestamp: true
+
+sidebar_footer_year: 2018
+
+aux_links:
+  fr:
+    "Gamebuino":
+      - "//gamebuino.com/fr/"
+    "Académie":
+      - "//gamebuino.com/fr/academy"
+    "Communauté":
+      - "//community.gamebuino.com/"
+  en:
+    "Gamebuino":
+      - "//gamebuino.com"
+    "Academy":
+      - "//gamebuino.com/academy"
+    "Community":
+      - "//community.gamebuino.com/"
+
+aux_links_new_tab: true
+
+# Google Analytics Tracking
+ga_tracking: G-H5KD4XCX0X

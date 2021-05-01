@@ -1,0 +1,39 @@
+{%- comment -%}
+    @see https://ruby-doc.org/stdlib-2.6.1/libdoc/date/rdoc/DateTime.html (at the bottom)
+{%- endcomment -%}
+{%- assign pub_timestamp = site.published_date | default: "now" | date: "%s" | plus: 0 -%}
+{%- assign mod_timestamp = page.date | default: site.published_date | default: "now" | date: "%s" | plus: 0 -%}
+{%- assign now_timestamp = "now" | date: "%s" | plus: 0 -%}
+{%- assign published_time = pub_timestamp | date: "%FT%T%z" -%}
+{%- assign modified_time = mod_timestamp | date: "%FT%T%z" -%}
+{%- if tuto_lang == "fr" -%}
+
+    {%- assign pub_mday = pub_timestamp | date: "%-d" | plus: 0 -%}
+    {%- if pub_mday == 1 -%}
+        {%- assign pub_mday = "1er" -%}
+    {%- endif -%}
+    {%- assign pub_wday = pub_timestamp | date: "%u" | minus: 1 -%}
+    {%- assign pub_month = pub_timestamp | date: "%-m" | minus: 1 -%}
+    {%- assign pub_year = pub_timestamp | date: "%Y" | plus: 0 -%}
+    {%- capture publishing_date -%}
+        {{ site.data.fr.days[pub_wday] }} {{ pub_mday }} {{ site.data.fr.months[pub_month] }} {{ pub_year }}
+    {%- endcapture -%}
+    
+    {%- assign mod_mday = mod_timestamp | date: "%-d" | plus: 0 -%}
+    {%- if mod_mday == 1 -%}
+        {%- assign mod_mday = "1er" -%}
+    {%- endif -%}
+    {%- assign mod_wday = mod_timestamp | date: "%u" | minus: 1 -%}
+    {%- assign mod_month = mod_timestamp | date: "%-m" | minus: 1 -%}
+    {%- assign mod_year = mod_timestamp | date: "%Y" | plus: 0 -%}
+    {%- capture updated_date -%}
+        {{ site.data.fr.days[mod_wday] }} {{ mod_mday }} {{ site.data.fr.months[mod_month] }} {{ mod_year }}
+    {%- endcapture -%}
+
+    {%- assign updated_text = "Dernière modification :" -%}
+
+{%- else -%}
+    {%- assign publishing_date = pub_timestamp | date: "%A, %B %-d, %Y" -%}
+    {%- assign updated_date = mod_timestamp | date: "%A, %B %-d, %Y" -%}
+    {%- assign updated_text = "Last modified:" -%}
+{%- endif -%}

@@ -1,0 +1,20 @@
+{%- assign tuto_lang = page.lang | default: site.lang | default: 'en' -%}
+{%- if tuto_lang == "fr" -%}
+    {%- assign site_lang = "fr-FR" -%}
+    {%- assign site_locale = "fr_FR" -%}
+    {%- assign site_description = site.description.fr -%}
+    {%- assign site_keywords = site.keywords.fr -%}
+    {%- assign main_title = site.title.fr -%}
+    {%- assign search_text = site.search_text.fr -%}
+    {%- assign aux_links = site.aux_links.fr -%}
+    {%- assign back_to_top_text = site.back_to_top_text.fr -%}
+{%- else -%}
+    {%- assign site_lang = "en-US" -%}
+    {%- assign site_locale = "en_US" -%}
+    {%- assign site_description = site.description.en -%}
+    {%- assign site_keywords = site.keywords.en -%}
+    {%- assign main_title = site.title.en -%}
+    {%- assign search_text = site.search_text.en -%}
+    {%- assign aux_links = site.aux_links.en -%}
+    {%- assign back_to_top_text = site.back_to_top_text.en -%}
+{%- endif -%}

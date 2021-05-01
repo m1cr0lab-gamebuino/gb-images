@@ -1,0 +1,6 @@
+{% if include.color %}
+    {% assign color = include.color %}
+{% else %}
+    {% assign color = '#000' %}
+{% endif %}
+<span style="display:inline-block;width:1em;height:1em;margin-bottom:-.2em;border:1px solid #000;background-color:{{ color }};"></span>
