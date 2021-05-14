@@ -5,6 +5,7 @@ lang_ref: display-images
 nav_order: 6
 title: Affichage des images
 permalink: /fr/affichage-des-images
+date: 2021-05-14 10:15 +0400
 ---
 
 # Comment afficher tes images sur la META
@@ -694,14 +695,17 @@ assets/rgb565.h
 #pragma once
 
 const uint16_t SPRITE_DATA[] = {
-	8,      // frame width
-	8,      // frame height
-	4,      // number of frames
-	2,      // frame loop         <--
-	0xf81f, // transparent color
-	0,      // RGB565 color mode
-	// colormap
-    // ...
+
+    // metadata
+
+    8,      // frame width
+    8,      // frame height
+    4,      // frames
+    0,      // frame loop         <--
+    0xf81f, // transparent color
+    0,      // 16-bits color mode
+
+    // colormap
 ```
 
 Et voyons ce que l'on obtient avec ça :

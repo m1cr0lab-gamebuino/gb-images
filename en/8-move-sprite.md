@@ -5,6 +5,7 @@ lang_ref: move-sprite
 nav_order: 8
 title: How to move your sprite
 permalink: /en/how-to-move-your-sprite
+date: 2021-05-14 12:00 +0400
 ---
 
 # How to move your sprite
@@ -25,14 +26,17 @@ assets/rgb565.h
 
 ```cpp
 const uint16_t SPRITE_DATA[] = {
-	8,      // frame width
-	8,      // frame height
-	4,      // number of frames
-	0,      // frame loop         <--
-	0xf81f, // transparent color
-	0,      // RGB565 color mode
-	// colormap
-    // ...
+
+    // metadata
+
+    8,      // frame width
+    8,      // frame height
+    4,      // frames
+    0,      // frame loop         <--
+    0xf81f, // transparent color
+    0,      // 16-bits color mode
+
+    // colormap
 ```
 
 To position the avatar on the game scene, we need to assign it horizontal `x` and vertical `y` coordinates. An efficient way to implement our avatar is to define a very simple object-oriented model as follows:

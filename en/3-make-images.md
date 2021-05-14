@@ -5,6 +5,7 @@ lang_ref: make-images
 nav_order: 3
 title: How to make your images
 permalink: /en/how-to-make-your-images
+date: 2021-05-09 09:07 +0400
 ---
 
 # How to make your images for the META
@@ -20,7 +21,7 @@ Many graphic creation tools exist to create all the graphic elements that will c
 
 I'll let you discover them by yourself. This is not the purpose of this tutorial…
 
-In order to frame my remarks, I will take the example of a *platformer* (a platform game), in which we will have to control a character, our avatar, to tell him how to move in his environment. We will therefore need a graphic element that is animated, to visually represent the actions performed by the avatar. In the field of video games, we call this a **sprite**.
+To focus my point, I will take the example of a *platformer* (a platform game), in which we will have to control a character, our avatar, to tell him how to move in his environment. We will therefore need a graphic element that is animated, to visually represent the actions performed by the avatar. In the field of video games, we call this a **sprite**.
 
 Let's consider the following sprite, which is relatively simple, and which allows us to animate our avatar in successive steps to give the illusion that he is walking or running (depending on the speed at which we link the steps):
 
@@ -31,9 +32,9 @@ Let's consider the following sprite, which is relatively simple, and which allow
 Breaking down a frame-by-frame animation
 {: .caption }
 
-The animation is made with a sequence of images (also called *frames*), which are displayed successively for a short time, in a specific order. This is exactly the same principle that is used in the cinema. It is also the same principle that is used to create animated GIFs for example. But to animate our avatar in the game, we need to have total control over the order of the frames, as well as over the speed of the animation. This is where the code comes in.
+The animation is made with a sequence of images (also called *frames*), which are displayed successively for a short time, in a specific order. It's exactly the same principle we use in movies. This is also the same principle we use to create animated GIFs. But to animate our avatar in the game, we need to have total control over the order of the frames, as well as over the speed of the animation. This is where the code comes in.
 
-We will see together how to give life to our avatar by displaying the sprite on the screen, in each of the display modes that are at our disposal. But before that, I suggest you to analyze how the sprite is built.
+We will see together how to give life to our avatar by displaying the sprite on the screen, in each of the display modes that are at our disposal. But before that, But before that, let's analyze how the sprite is built.
 
 
 ## Anatomy of a sprite

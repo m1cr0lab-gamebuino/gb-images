@@ -5,6 +5,7 @@ lang_ref: move-sprite
 nav_order: 8
 title: Déplacer un sprite
 permalink: /fr/deplacer-un-sprite
+date: 2021-05-14 12:00 +0400
 ---
 
 # Comment déplacer ton avatar
@@ -25,14 +26,17 @@ assets/rgb565.h
 
 ```cpp
 const uint16_t SPRITE_DATA[] = {
-	8,      // frame width
-	8,      // frame height
-	4,      // number of frames
-	0,      // frame loop         <--
-	0xf81f, // transparent color
-	0,      // RGB565 color mode
-	// colormap
-    // ...
+
+    // metadata
+
+    8,      // frame width
+    8,      // frame height
+    4,      // frames
+    0,      // frame loop         <--
+    0xf81f, // transparent color
+    0,      // 16-bits color mode
+
+    // colormap
 ```
 
 Pour placer notre avatar sur la scène de jeu, on doit lui associer des coordonnées horizontale `x` et verticale `y`. Une façon efficace d'implémenter notre avatar consiste à définir un modèle orienté objet très simple de la façon suivante :

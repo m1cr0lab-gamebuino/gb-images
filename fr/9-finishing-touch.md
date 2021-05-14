@@ -5,6 +5,7 @@ lang_ref: finishing-touch
 nav_order: 9
 title: La touche finale
 permalink: /fr/la-touche-finale
+date: 2021-05-14 12:10 +0400
 ---
 
 # La touche finale
@@ -27,7 +28,7 @@ Je te propose de la télécharger et de la ranger dans ton dossier `artwork` ave
 [Torch spritesheet][torch]{: .btn .btn-primary download="" }
 {: .text-center }
 
-Ensuite, dépose-la sur **Image Transcoder**, que j'ai préparamétré ci-dessous, pour la convertir en code C++, et colle le code obtenu à la suite du fichier `assets/rgb565.h` en nommant le tableau de données `TORCH_DATA`.
+Ensuite, dépose-la sur **Image Transcoder** pour la convertir en code C++, et colle le code obtenu à la suite du fichier `assets/rgb565.h` en nommant le tableau de données `TORCH_DATA`. Règle la propriété `frame_loop = 2` pour automatiser l'animation des torches.
 
 <iframe src="https://gamebuino.m1cr0lab.com/tools/img2code/?fw=8&fh=16&as=2&tc=0xff00ff" height="800"></iframe>
 
@@ -62,14 +63,17 @@ assets/rgb565.h
 
 ```cpp
 const uint16_t TORCH_DATA[] = {
+
+    // metadata
+
     8,      // frame width
     16,     // frame height
-    10,     // number of frames
+    10,     // frames
     2,      // frame loop
     0xf81f, // transparent color
-    0,      // RGB565 color mode
+    0,      // 16-bits color mode
+
     // colormap
-    // ...
 ```
 
 Il ne nous reste plus qu'à invoquer la fonction `drawTorches()`, dans la boucle principale, pour afficher les torches sur la scène de jeu :

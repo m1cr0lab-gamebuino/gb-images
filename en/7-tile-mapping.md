@@ -4,7 +4,8 @@ lang: en
 lang_ref: tile-mapping
 nav_order: 7
 title: Tile Mapping
-permalink: /fr/tilemapping
+permalink: /en/tilemapping
+date: 2021-05-14 12:00 +0400
 ---
 
 # How to decorate the game scene
@@ -23,14 +24,17 @@ assets/rgb565.h
 
 ```cpp
 const uint16_t TILESET_DATA[] = {
-	16,     // frame width
-	8,      // frame height
-	4,      // number of frames
-	0,      // frame loop         <--
-	0xf81f, // transparent color
-	0,      // RGB565 color mode
-	// colormap
-    // ...
+
+    // metadata
+
+    16,     // frame width
+    8,      // frame height
+    4,      // frames
+    0,      // frame loop
+    0xf81f, // transparent color
+    0,      // 16-bits color mode
+
+    // colormap
 ```
 
 This allows to disable the automatic animation process handled by `gb.display`.

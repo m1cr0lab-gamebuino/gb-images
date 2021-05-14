@@ -5,6 +5,7 @@ lang_ref: display-modes
 nav_order: 2
 title: Display modes
 permalink: /en/display-modes
+date: 2021-05-09 08:56 +0400
 ---
 
 # Display modes on the META
@@ -22,7 +23,7 @@ The META incorporates a popular 1.8" TFT screen, the [ST7735R][ST7735R], found o
 1.8" TFT color display ST7735R with 160x128 resolution
 {: .caption }
 
-This small screen has an internal memory that can store information characterizing up to 162x132 pixels with 18 bits of depth to code the color of each pixel. Several display modes are available, with three different color spaces: RGB444, RGB565 and RGB666. The META has been configured to use a resolution of **160x128** pixels in the **RGB565** color space (5 bits for red, 6 bits for green and 5 bits for blue), i.e. with a depth of 5+6+5 = 16 bits. Therefore, each pixel of the screen can endorse a color among 2<sup>16</sup> = **65,536**… Which is not bad, and leaves us free to express our creativity. Here is a small overview of the diversity of colors that [can be obtained][aoneill] on the META:
+This small screen has an internal memory that can store up to 162x132 pixels with 18 bits of depth to code the color of each pixel. Several display modes are available, with three different color spaces: RGB444, RGB565 and RGB666. The META has been configured to use a resolution of **160x128** pixels in the **RGB565** color space (5 bits for red, 6 bits for green and 5 bits for blue), i.e. with a depth of 5+6+5 = 16 bits. Therefore, each pixel of the screen can show a color among 2<sup>16</sup> = **65,536**… Which is not bad, and leaves us free to express our creativity. Here is a small overview of the diversity of colors that [can be obtained][aoneill] on the META:
 
 {% include meta-demo.html src="/assets/screen/demo-colors.gif" %}
 
@@ -47,12 +48,12 @@ The [Gamebuino-META][gb-meta] library provides a consistent API dedicated to the
 
 The 4th mode is a bit more complex to handle, and is for the more experienced among us, as it cannot be operated with the `gb.display` API. To use this mode, you will have to turn to another API, which is also provided by the [Gamebuino-META][gb-meta] library: [`gb.tft`][gb-tft]. This is actually an adaptation of the [Adafruit-ST7735-library][ada-st7735]. The exploitation of the `gb.tft` API is beyond the scope of this tutorial and will not be discussed here.
 
-Fine, but then why distinguish all these display modes? What makes them different and how do you know which one to choose?
+Fine, but then why distinguish between all these display modes? What makes them different and how can you know which one to choose?
 
 
 ## Impacts on memory management
 
-Let's take the example of display mode number 4 which allows us to fully exploit the capabilities of the ST7735R on the META. In this mode, the display is discretized by a matrix of 160x128 pixels in the RGB565 color space. That is to say that 5+6+5 = 16 bits are necessary to store the binary code of the color of each pixel.
+Let's take the example of display mode number 4 which allows us to fully exploit the capabilities of the ST7735R on the META. In this mode, the display consists in a matrix of 160x128 pixels in the RGB565 color space. That is to say that 5+6+5 = 16 bits are necessary to store the binary code of the color of each pixel.
 
 The spatial and colorimetric reference of the screen is as follows:
 
@@ -75,7 +76,7 @@ Displaying a pixel on the screen, at the coordinates **(x, y)**, means assigning
 160 x 128 x 16 bits = 160 x 128 x 2 bytes = 40,960 bytes = 40KB
 {: .formula }
 
-This memory space corresponds to an area of *preparation* of the display which is called a **graphic buffer**. This area is used to collect the information that will then be transmitted to the display controller to finally be visible on the screen and result in a particular coloring of each light unit that makes up the screen. The TFT screen is part of the family of LCD screens in which each pixel is controlled by a tiny semiconductor that controls the amount of light to pass. The light is emitted using 3 light-emitting diodes: one for red, one for green and one for blue. It is the mixture of these 3 primary colors, with differentiated levels of light intensity that allows to obtain the desired color, by additive composition.
+This memory space corresponds to an area of *preparation* of the display which is called a **graphic buffer**. This area is used to collect the information that will then be transmitted to the display controller to finally be visible on the screen and result in a particular coloring of each light unit that makes up the screen. The TFT screen is part of the family of LCD screens in which each pixel is controlled by a tiny semiconductor that controls the amount of light to pass. The light is emitted using 3 light-emitting diodes: one for red, one for green and one for blue. It is the mixture of these 3 primary colors, with differentiated levels of light intensity that makes it possible to obtain the desired color, by additive composition.
 
 The graphic buffer used to prepare the display is necessarily stored in RAM during the execution of the program, and is likely to change its state at any time. Indeed, instructions will continuously modify the graphics buffer to display what you want on the screen, when you want it.
 
@@ -83,7 +84,7 @@ The [Gamebuino-META][gb-meta] library takes care of this graphic buffer itself a
 
 Well, let's get back to our little calculation… If we want to use the entire RGB565 color space with a resolution of 160x128 pixels, we need a **40k** graphics buffer… Now, you probably know that the META only has **32k** of RAM. So we have a big problem: how to fit 40k into 32k?
 
-The graphic buffer of `gb.display` simply does not allow it. This is precisely why this display mode cannot be handled by the `gb.display` API. It's not impossible in the absolute… but you have to trick it… and use the `gb.tft` API, which is much more rudimentary, and therefore more complicated to use. That's why this display mode is reserved for the initiated.  <i class="far fa-smile-wink"></i>
+The graphic buffer of `gb.display` simply does not allow it. This is precisely why this display mode cannot be handled by the `gb.display` API. It's not impossible in the absolute… but you have to use tricks… and use the `gb.tft` API, which is much more rudimentary, and therefore more complicated to use. That's why this display mode is reserved for the initiated.  <i class="far fa-smile-wink"></i>
 
 Well, what about the other modes?
 
@@ -115,7 +116,7 @@ And we land on our feet, as in the previous case.
 
 ### DISPLAY_MODE_INDEX_HALFRES
 
-Here, the reasoning is the same with a display surface divided by 4 (we go back to 80x64):
+Here, the reasoning is the same with a display surface divided by 4 (we go back to 80x64) while retaining a 16 color only palette:
 
 80 x 64 x 4 bits = 80 x 64 x &frac12; bytes = 2,560 bytes = 2.5KB
 {: .formula }

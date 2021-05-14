@@ -5,6 +5,7 @@ lang_ref: finishing-touch
 nav_order: 9
 title: Finishing touch
 permalink: /en/finishing-touch
+date: 2021-05-14 12:10 +0400
 ---
 
 # The finishing touch
@@ -27,7 +28,7 @@ I suggest you download it and put it in your `artwork` folder with the other ass
 [Torch spritesheet][torch]{: .btn .btn-primary download="" }
 {: .text-center }
 
-Then, drop it on **Image Transcoder**, which I have prepared below, to convert it into C++ code, and paste the resulting code at the end of the `assets/rgb565.h` file, naming the data array `TORCH_DATA`.
+Then drop it on **Image Transcoder** to convert it to C++ code, and paste the resulting code after the `assets/rgb565.h` file, naming the data array `TORCH_DATA`. Set the `frame_loop = 2` property to automate the torch animation.
 
 <iframe src="https://gamebuino.m1cr0lab.com/tools/img2code/?fw=8&fh=16&as=2&tc=0xff00ff" height="800"></iframe>
 
@@ -62,14 +63,17 @@ assets/rgb565.h
 
 ```cpp
 const uint16_t TORCH_DATA[] = {
+
+    // metadata
+
     8,      // frame width
     16,     // frame height
-    10,     // number of frames
+    10,     // frames
     2,      // frame loop
     0xf81f, // transparent color
-    0,      // RGB565 color mode
+    0,      // 16-bits color mode
+
     // colormap
-    // ...
 ```
 
 Now we just have to invoke the `drawTorches()` function, in the main loop, to display the torches on the game scene:
