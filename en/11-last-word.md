@@ -16,7 +16,7 @@ I would be very happy to hear your opinion or to answer any questions you may ha
 [Drop me a message][comment]{: .btn .btn-green }
 {: .text-center }
 
-The Gamebuino META is a great educational tool for learning programming. We need to cultivate its interest among young (and not so young) people, but we need the help of its community of users, **you** the Gamebuiners. You can be an actor in its development, by sharing your creations of course, but also by giving your opinion or by expressing your expectations on what you would like to learn to do with this programmable game console handheld, that does not lack potential.
+The Gamebuino META is a great educational tool for learning programming. We need to cultivate its interest among young (and not so young) people, but we need the help of its community of users, **we** Gamebuiners. You can be an actor in its development, by sharing your creations of course, but also by giving your opinion or by expressing your expectations on what you would like to learn to do with this programmable game console handheld, that does not lack potential.
 
 
 ## Getting the source code

@@ -31,6 +31,6 @@ So here we go ! Have fun...
 
 
 
-[pong]:    https://gamebuino.com/fr/academy/workshop/make-your-very-first-games-with-pong
-[academy]: http://gamebuino.com/fr/academy
+[pong]:    https://gamebuino.com/academy/workshop/make-your-very-first-games-with-pong
+[academy]: http://gamebuino.com/academy
 [gb-meta]: https://github.com/Gamebuino/Gamebuino-META

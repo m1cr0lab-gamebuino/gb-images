@@ -16,7 +16,7 @@ Je serais très content de connaître ton avis ou de répondre aux questions que
 [Laisse moi un message][comment]{: .btn .btn-green }
 {: .text-center }
 
-La Gamebuino META est un outil pédagogique formidable pour l'apprentissage de la programmation. Il faut cultiver son intérêt auprès des jeunes (et des moins jeunes), mais ça n'est pas sans compter sur le concours de sa communauté d'utilisateurs, **vous** les Gamebuiniens. Tu peux être acteur de son développement, en partageant tes créations bien sûr, mais aussi en donnant ton avis ou en exprimant tes attentes sur ce que tu aimerais apprendre à réaliser avec cette petite console de jeux programmable, qui ne manque pas de potentiel.
+La Gamebuino META est un outil pédagogique formidable pour l'apprentissage de la programmation. Il faut cultiver son intérêt auprès des jeunes (et des moins jeunes), mais ça n'est pas sans compter sur le concours de sa communauté d'utilisateurs, **nous** les Gamebuiniens. Tu peux être acteur de son développement, en partageant tes créations bien sûr, mais aussi en donnant ton avis ou en exprimant tes attentes sur ce que tu aimerais apprendre à réaliser avec cette petite console de jeux programmable, qui ne manque pas de potentiel.
 
 
 ## Récupération des codes sources

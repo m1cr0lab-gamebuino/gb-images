@@ -5,7 +5,7 @@ lang_ref: display-images
 nav_order: 6
 title: Affichage des images
 permalink: /fr/affichage-des-images
-date: 2021-05-14 10:15 +0400
+date: 2021-05-15 09:35 +0400
 ---
 
 # Comment afficher tes images sur la META
@@ -642,7 +642,7 @@ void loop() {
     gb.display.clear();
 
     gb.display.setPalette(palette);
-    palette[0xf] = (Color)((uint8_t)(0x1f*(1+sin(4*PI*(gb.frameCount & 0x3f)/0x3f))) << 5);
+    palette[0x0] = (Color)((uint8_t)(0x1f*(1+sin(4*PI*(gb.frameCount & 0x3f)/0x3f))) << 5);
 
     uint8_t aw = 3*AVATAR_WIDTH;
     uint8_t ah = 3*AVATAR_HEIGHT;
@@ -675,18 +675,7 @@ Les possibilités sont vastes, même sur un petit écran comme celui de la META.
 
 On vient de passer en revue les différentes manières d'afficher notre sprite à l'écran avec la méthode `drawImage()`. On ne s'est pas du tout préoccupé de gérer l'animation, puisqu'elle est mise en oeuvre de manière automatique grâce à la propriété `frame_loop` que nous avons définie dans le tableau `SPRITE_DATA`. Jusque là, elle avait la valeur de `4`, ce qui se traduisait par une animation à la fréquence de **8 fps**.
 
-Si on souhaite doubler cette fréquence pour la passer à **16 fps** et donner l'impression que notre avatar est en train de courir, il suffit de diviser `frame_loop` par `2`.
-
-Repasssons en mode RGB565 :
-
-config-gamebuino.h
-{: .filename }
-
-```cpp
-#define DISPLAY_MODE DISPLAY_MODE_RGB565
-```
-
-Puis modifions la fréquence d'animation du sprite :
+Si on souhaite doubler cette fréquence pour la passer à **16 fps** et donner l'impression que notre avatar est en train de courir, il suffit de diviser `frame_loop` par `2` :
 
 assets/rgb565.h
 {: .filename }
@@ -701,7 +690,7 @@ const uint16_t SPRITE_DATA[] = {
     8,      // frame width
     8,      // frame height
     4,      // frames
-    0,      // frame loop         <--
+    2,      // frame loop         <-- 4/2 = 2
     0xf81f, // transparent color
     0,      // 16-bits color mode
 
