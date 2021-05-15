@@ -29,7 +29,7 @@ void loop() {
     gb.display.clear();
 
     gb.display.setPalette(palette);
-    palette[0xf] = (Color)((uint8_t)(0x1f*(1+sin(4*PI*(gb.frameCount & 0x3f)/0x3f))) << 5);
+    palette[0x0] = (Color)((uint8_t)(0x1f*(1+sin(4*PI*(gb.frameCount & 0x3f)/0x3f))) << 5);
 
     uint8_t aw = 3*AVATAR_WIDTH;
     uint8_t ah = 3*AVATAR_HEIGHT;
