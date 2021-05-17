@@ -12,7 +12,7 @@ date: 2021-05-14 09:50 +0400
 
 Tired of having to do these conversions myself, I quickly decided to code a dedicated tool to do the job for me: [Image Transcoder][image-transcoder]. The arrival of a new team at the helm of the Gamebuino ship made me want to upgrade my tool and give it a coat of varnish.
 
-First of all, I suggest you to download the **assets**, i.e. the graphic resources of the project, which we will convert into C++ code. This will save you from having to redraw everything, unless you want to discover [Piskel][piskel] or another graphic tool of your choice...
+First of all, I suggest you to download the **assets**, i.e. the graphic resources of the project, which we will convert into C++ code. This will save you from having to redraw everything, unless you want to discover [Piskel][piskel] or another graphic tool of your choice…
 
 [Spritesheet][spritesheet]{: .btn .btn-purple download="" style="margin-right:.5em;" }
 [Tileset][tileset]{: .btn .btn-purple download="" style="margin-right:.5em;" }

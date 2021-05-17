@@ -27,10 +27,13 @@ Here is what we will achieve together
 
 I hope this perspective will make you want to get through this tutorial. You'll see that it's not as complicated as it looks. Your Gamebuino comes with a software library, the well-known [`<Gamebuino-META.h>`][gb-meta], which you'll find in all the programs for META, and which will make your life much easier.
 
-So here we go ! Have fun...
+English is not my natural language, so I apologize in advance for any awkward wording I may have left out during the writing process. I have tried my best to keep the text from being too painful to read. I hope not to lose too many people on the way… And I'd like to take this opportunity to thank [Tom][tom] for taking the time to proofread this version and for pointing out a few heavy wordings.
+
+So here we go ! Have fun…
 
 
 
 [pong]:    https://gamebuino.com/academy/workshop/make-your-very-first-games-with-pong
 [academy]: http://gamebuino.com/academy
 [gb-meta]: https://github.com/Gamebuino/Gamebuino-META
+[tom]:     https://gamebuino.com/@tombuino
