@@ -25,8 +25,8 @@ description:
   en: "This tutorial presents the different ways to handle the display of images on the Gamebuino META."
 
 keywords:
-  fr: [gamebuino-meta, images, animation, gb.display]
-  en: [gamebuino-meta, images, animation, gb.display]
+  fr: [gamebuino-meta, images, animation, spritesheet, tileset, gb.display]
+  en: [gamebuino-meta, images, animation, spritesheet, tileset, gb.display]
 
 lab_tags: [gamebuino-meta, images, animation, gb.display]
 
