@@ -5,13 +5,16 @@ lang_ref: last-word
 nav_order: 11
 title: Le mot de la fin
 permalink: /fr/le-mot-de-la-fin
+date: 2021-05-18 14:15 +0400
 ---
 
 # Le mot de la fin
 
 Nous arrivons au terme de ce tutoriel. J'espère que tu y auras appris des choses utiles pour tes prochaines réalisations. Tu as pu constater que la bibliothèque officielle [Gamebuino-META][gb-meta] propose tout ce qui est nécessaire pour agrémenter tes jeux avec de beaux graphismes, même si la console a des ressources matérielles limitées. Ton imagination et quelques astuces de programmation te laissent le champ libre pour développer de très belles choses.
 
-Je serais très content de connaître ton avis ou de répondre aux questions que tu te poses à propos de tout ce que nous avons exploré ensemble dans ce tutoriel. N'hésite pas à me laisser un message ou à engager la discussion sur le forum de la communauté :
+Si le tutoriel t'as plu, pense à me laisser un <i class="fas fa-heart" style="color:#f0f;"></i> [sur cette page][heart] pour me le faire savoir.
+
+Je serais aussi très content de connaître ton avis ou de répondre aux questions que tu te poses à propos de tout ce que nous avons exploré ensemble dans ce tutoriel. N'hésite pas à me laisser un message ou à engager la discussion sur le forum de la communauté :
 
 [Laisse moi un message][comment]{: .btn .btn-green }
 {: .text-center }
@@ -40,6 +43,7 @@ Le projet au complet
 
 
 [gb-meta]: https://github.com/Gamebuino/Gamebuino-META
-[comment]: http://community.gamebuino.com/
+[heart]:   https://gamebuino.com/fr/creations/handling-images-on-the-gamebuino-meta
+[comment]: https://community.gamebuino.com/t/new-creation-handling-images-on-the-gamebuino-meta-by-steph/201
 [project]: {{ site.baseurl }}/assets/figures/project-complete-632x1466.png
 [github]:  {{ site.github.repository_url }}

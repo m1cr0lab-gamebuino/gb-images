@@ -5,11 +5,14 @@ lang_ref: last-word
 nav_order: 11
 title: Last word
 permalink: /en/last-word
+date: 2021-05-18 14:15 +0400
 ---
 
 # The last word
 
 This is the end of this tutorial. I hope you have learned some useful things for your next projects. You have seen that the official [Gamebuino-META][gb-meta] library has everything you need to enhance your games with beautiful graphics, even if the console has limited hardware resources. Your imagination and a few programming tricks leave you free to develop beautiful things.
+
+If you liked the tutorial, please leave me a <i class="fas fa-heart" style="color:#f0f;"></i> [on this page][heart] to let me know.
 
 I would be very happy to hear your opinion or to answer any questions you may have about everything we have explored together in this tutorial. Feel free to leave me a message or start a discussion on the community forum:
 
@@ -40,6 +43,7 @@ The full project
 
 
 [gb-meta]: https://github.com/Gamebuino/Gamebuino-META
-[comment]: http://community.gamebuino.com/
+[heart]:   https://gamebuino.com/creations/handling-images-on-the-gamebuino-meta
+[comment]: https://community.gamebuino.com/t/new-creation-handling-images-on-the-gamebuino-meta-by-steph/201
 [project]: {{ site.baseurl }}/assets/figures/project-complete-632x1466.png
 [github]:  {{ site.github.repository_url }}
