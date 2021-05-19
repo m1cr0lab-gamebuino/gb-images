@@ -24,7 +24,7 @@ L'objectif est ici de t'aider à mieux comprendre comment créer et intégrer de
 Voici ce que nous allons réaliser ensemble
 {: .caption }
 
-J'espère que cette perspective te donnera envie d'aller jusqu'au bout. Tu verras que ça n'est pas si compliqué que ça en a l'air. Ta Gamebuino est fournie avec une bibliothèque logicielle, la fameuse [`<Gamebuino-META.h>`][gb-meta], que tu retrouves dans tous les programmes pour la META, qui va grandement te faciliter la vie.
+J'espère que cette perspective te donnera envie d'aller jusqu'au bout. Tu verras que ça n'est pas si compliqué que ça en a l'air. Ta Gamebuino est fournie avec une bibliothèque logicielle, la fameuse [`<Gamebuino-META.h>`][gb-meta], que tu retrouves dans tous les programmes pour la META, et qui va grandement te faciliter la vie.
 
 Allez c'est parti ! Amuse toi bien…  <i class="far fa-smile"></i>
 
