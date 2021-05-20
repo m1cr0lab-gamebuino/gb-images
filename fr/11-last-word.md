@@ -12,7 +12,7 @@ date: 2021-05-18 14:15 +0400
 
 Nous arrivons au terme de ce tutoriel. J'espère que tu y auras appris des choses utiles pour tes prochaines réalisations. Tu as pu constater que la bibliothèque officielle [Gamebuino-META][gb-meta] propose tout ce qui est nécessaire pour agrémenter tes jeux avec de beaux graphismes, même si la console a des ressources matérielles limitées. Ton imagination et quelques astuces de programmation te laissent le champ libre pour développer de très belles choses.
 
-Si le tutoriel t'as plu, pense à me laisser un <i class="fas fa-heart" style="color:#f0f;"></i> [sur cette page][heart] pour me le faire savoir.
+Si le tutoriel t'a plu, pense à me laisser un <i class="fas fa-heart" style="color:#f0f;"></i> [sur cette page][heart] pour me le faire savoir.
 
 Je serais aussi très content de connaître ton avis ou de répondre aux questions que tu te poses à propos de tout ce que nous avons exploré ensemble dans ce tutoriel. N'hésite pas à me laisser un message ou à engager la discussion sur le forum de la communauté :
 
